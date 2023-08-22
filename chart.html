@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Chart.js Dashboard</title>
+    <script src="{{ url_for('static', filename='js/Chart.min.js') }}"></script>
+    <script>https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.3/chart.min.js</script>
+</head>
+<body>
+   <div>
+  <canvas id="myChart" max-height="100" max-weight="100"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['lakehood', 'Intensity', 'Relevance', 'Year', 'Country', 'Topics'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>
+
